@@ -14,12 +14,15 @@ class SeriesController extends Controller
             'Grey\'s Anatomy'
         ];
 
-        $html = '<ul>';
-        foreach ($series as $serie) {
-            $html .= "<li>$serie</li>";
-        }
-        $html .="</ul>";
+        // return view('lista-series', [
+        //     'series' => $series
+        // ]);
+        // return view('lista-series', compact('series'));
+        return view('series.index')->with('series', $series);
+    }
 
-        return $html;
+    public function create(Request $request) 
+    {
+        return view('series.create')->with('series');
     }
 }
