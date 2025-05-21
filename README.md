@@ -13,3 +13,15 @@ Repositorio onde irei colocar os estudos iniciais do Laravel
 - `php artisan make:controller SeriesController`
 - Para criar a rota o conteúdo vai routes/web.php, seguindo o padrão:
     - `Route::get('/series',[SeriesController::class, 'index']);`.
+
+## Criando as migrations
+
+- `php artisan make:migration create_series_table`, para criar a migrate;
+- `php artisan migrate`, para o banco as migrações no banco;
+
+### Criando o model
+
+- `php artisan make:model Serie`, para criar o modelo para uso do banco
+- `DB::insert()`, `DB::select()`, são formas de interagir direto com o banco sem usar o ORM.
+    - `DB::insert($query, [$nomeSerie]);`
+    - `DB::select($query);`
