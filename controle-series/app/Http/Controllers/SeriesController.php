@@ -23,6 +23,6 @@ class SeriesController extends Controller
 
     public function create(Request $request) 
     {
-        return view('series.create')->with('series');
+        return view('series.create');
     }
 }

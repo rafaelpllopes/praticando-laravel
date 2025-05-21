@@ -7,5 +7,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/series',[SeriesController::class, 'index']);
-Route::get('/series/criar',[SeriesController::class, 'create']);
+Route::get('/series',[SeriesController::class, 'index'])->name('series.index');
+Route::get('/series/criar',[SeriesController::class, 'create'])->name('series.create');
