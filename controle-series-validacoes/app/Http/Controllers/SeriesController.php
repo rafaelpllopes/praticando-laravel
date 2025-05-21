@@ -10,14 +10,7 @@ class SeriesController extends Controller
 {
     public function index(Request $request) 
     {
-        // $series = Serie::all();
         $series = Serie::query()->orderBy('nome')->get();
-
-
-        // return view('lista-series', [
-        //     'series' => $series
-        // ]);
-        // return view('lista-series', compact('series'));
         return view('series.index')->with('series', $series);
     }
 
@@ -28,10 +21,8 @@ class SeriesController extends Controller
 
     public function store(Request $request) 
     {
-        $nomeSerie = $request->input('nome');
-        $serie = new Serie();
-        $serie->nome = $nomeSerie;
+        Serie::create($request->all());
 
-        return $serie->save() ? redirect('series') : redirect('criar');
+        return to_route('series.index');
     }
 }
