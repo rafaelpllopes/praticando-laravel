@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 
-class Serie extends Model
+class Series extends Model
 {
-    protected $fillable = ['nome'];
-    // protected $with = ['temporadas'];
+    protected $fillable = ['name'];
+    // protected $with = ['seasons'];
 
-    public function temporadas()
+    public function seasons()
     {
         return $this->hasMany(Season::class, 'series_id'); //Relacionamento um para muitos, uma serie pode ter muitas temporadas
     }
@@ -18,7 +18,7 @@ class Serie extends Model
     protected static function booted()
     {
         self::addGlobalScope('ordered', function (Builder $queryBuider) {
-            $queryBuider->orderBy('nome');
+            $queryBuider->orderBy('name', 'desc');
         });
     }
 }
