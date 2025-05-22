@@ -36,4 +36,5 @@ Laravel: crie aplicações web em PHP
 
 Laravel: validando formulários, usando sessões e definindo relacionamentos
 
-- Pasta do projeto controle-series-validacoes
+- Pasta do projeto controle-series-validacoes;
+- `php artisan make:request SeriesFormReques` para criar seu proprio request;
