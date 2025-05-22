@@ -60,6 +60,37 @@ class SeriesController extends Controller
 
             return $serie;
         }, 5);
+
+        // try {
+        //     DB::beginTransaction();        
+        //     $serie = Series::create($request->all());
+    
+        //     $seasons = [];
+    
+        //     for ($i = 1; $i <= $request->seasonsQty; $i++) {
+        //         $seasons[] = [
+        //             'series_id' => $serie->id,
+        //             'number' => $i,
+        //         ];
+        //     }
+    
+        //     Season::insert($seasons);
+    
+        //     $episodes = [];
+        //     foreach ($serie->seasons as $season) {
+        //         for ($j = 1; $j <= $request->episodesPerSeason; $j++) {
+        //             $episodes[] = [
+        //                 'season_id' => $season->id,
+        //                 'number' => $j,
+        //             ];
+        //         }
+        //     }
+    
+        //     Episode::insert($episodes);
+        //     DB::commit();
+        // } catch (\Throwable $erro) {
+        //     DB::rollBack();
+        // }
         
         return to_route('series.index')
                 ->with('mensagem.sucesso', "Série '{$serie->name}' adicionado com sucesso");
