@@ -38,3 +38,5 @@ Laravel: validando formulários, usando sessões e definindo relacionamentos
 
 - Pasta do projeto controle-series-validacoes;
 - `php artisan make:request SeriesFormReques` para criar seu proprio request;
+- `php controle-series-validacoes/artisan make:model Season -m` para criar o model e migration;
+- `php controle-series-validacoes/artisan make:model Episode -m` para criar o model e migration;
