@@ -50,3 +50,8 @@ Laravel: validando formulários, usando sessões e definindo relacionamentos
 - Aprofunde seus conhecimentos sobre o framework
 - Aprenda sobre autenticação
 - Conheça um starter-pack para Laravel
+
+### Migrations
+
+- `php controle-series-serv-cont-auten/artisan make:migration --table=episodes add_watched_episode`, cria uma nova migrate.
+- `php controle-series-serv-cont-auten/artisan migrate`

@@ -1,14 +1,5 @@
 <x-layout title="Nova Seŕie">
     <form action="{{ route('series.store') }}" method="post">
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
         @csrf
         <div class='row mb-3'>
             <div class="col-8">

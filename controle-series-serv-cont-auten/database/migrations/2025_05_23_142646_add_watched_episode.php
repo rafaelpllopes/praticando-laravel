@@ -9,13 +9,10 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-
     public function up(): void
     {
-        Schema::create('episodes', function (Blueprint $table) {
-            $table->id();
-            $table->unsignedTinyInteger('number');
-            $table->foreignId('season_id')->constrained()->onDelete('cascade');
+        Schema::table('episodes', function (Blueprint $table) {
+            $table->boolean('watched')->default(false);
         });
     }
 
@@ -24,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('episodes');
+        Schema::table('episodes', function (Blueprint $table) {
+            $table->dropColumn('watched');
+        });
     }
 };

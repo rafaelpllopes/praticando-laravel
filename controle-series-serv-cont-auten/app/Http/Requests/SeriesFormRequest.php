@@ -26,7 +26,7 @@ class SeriesFormRequest extends FormRequest
         ];
     }
 
-    public function messages(): array
+    public function messages()
     {
         return [
             'name.required' => 'O campo nome é obrigatório',
