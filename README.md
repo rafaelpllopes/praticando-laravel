@@ -60,3 +60,11 @@ Laravel: validando formulários, usando sessões e definindo relacionamentos
 
 - `php artisan make:middleware Authenticate`
 - `php artisan make:controller LoginController`
+
+## Laravel: construindo APIs
+
+- Entenda o conceito geral de APIs
+- Conheça sobre REST
+- Se aprofunde nos conhecimentos de Laravel e Eloquent
+- Aprenda a realizar paginação de dados
+- Utilize Laravel Sanctum para cuidar da autenticação de sua API
