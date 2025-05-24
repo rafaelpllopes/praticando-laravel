@@ -53,5 +53,10 @@ Laravel: validando formulários, usando sessões e definindo relacionamentos
 
 ### Migrations
 
-- `php controle-series-serv-cont-auten/artisan make:migration --table=episodes add_watched_episode`, cria uma nova migrate.
-- `php controle-series-serv-cont-auten/artisan migrate`
+- `php artisan make:migration --table=episodes add_watched_episode`, cria uma nova migrate.
+- `php artisan migrate`
+
+### Auth/Middleware
+
+- `php artisan make:middleware Authenticate`
+- `php artisan make:controller LoginController`
