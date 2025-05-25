@@ -15,6 +15,11 @@ class Series extends Model
         return $this->hasMany(Season::class, 'series_id'); //Relacionamento um para muitos, uma serie pode ter muitas temporadas
     }
 
+    public function episodes()
+    {
+        return $this->hasManyThrough(Episode::class, Season::class);
+    }
+
     protected static function booted()
     {
         self::addGlobalScope('ordered', function (Builder $queryBuider) {
